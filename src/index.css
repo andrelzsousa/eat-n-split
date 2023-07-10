@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pfp {
+    width: 15%;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.friendList,
+.addFriend, .split {
+    padding: 0.5em;
+    background-color: red;
+    width: 19em;
+}
+
+.friendList {
+    margin-bottom: 1em;
+}
+
+.addFriend, .split{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.add-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0
+}
+
+.split{
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.split-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.split-container input,  .split-container select{
+    width: 10em;
 }

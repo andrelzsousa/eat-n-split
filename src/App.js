@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import FriendList from './components/FriendList.js';
+import Friend from './components/Friend.js';
+import './index.css'
+import './reset.css'
+import AddFriend from './components/AddFriend.js';
+import Split from './components/Split.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='app-container'>
+        <FriendList />
+        <AddFriend />
+      </div>
+        <Split />
     </div>
-  );
+  )
+
 }
 
 export default App;
