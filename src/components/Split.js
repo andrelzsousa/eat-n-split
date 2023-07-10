@@ -1,7 +1,7 @@
 function Split() {
     return (
         <div className='split'>
-            <h1>Split bill with clark</h1>
+            <h1 style={{fontWeight: 'bold', fontSize: '24px'}}>Split bill with clark</h1>
 
             <div className='split-container'>
                 <label>Bill Value</label>

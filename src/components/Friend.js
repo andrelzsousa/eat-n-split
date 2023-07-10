@@ -1,13 +1,11 @@
-import rosto from '../assets/images/rosto.png'
-
-function Friend() {
+function Friend({name, picture, debt}) {
     return (
         <div className='friend'>
             <div className='info'>
-                <img src={rosto} alt="pfp" className='pfp' />
+                <img src={picture} alt="pfp" className='pfp' />
                 <div>
-                    <h3>Clark</h3>
-                    <p>you and Clark are even</p>
+                    <h3>{name}</h3>
+                    <p>{debt === 0 ? `You and ${name} are even` : debt > 0 ? `You owe ${name} $${Math.abs(debt)}` : `${name} owes you $${Math.abs(debt)}`}</p>
                 </div>
             </div>
             <button>Select</button>
