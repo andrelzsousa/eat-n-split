@@ -1,4 +1,18 @@
-function Friend({name, picture, debt}) {
+function Friend({name, picture, debt, id, onSelect, selected}) {
+
+    function handleSelect(){
+
+        if (selected && selected.id === id){
+            onSelect(null)
+            return
+        }
+
+        onSelect({
+            name: name,
+            id: id
+        })
+    }
+
     return (
         <div className='friend'>
             <div className='info'>
@@ -8,7 +22,7 @@ function Friend({name, picture, debt}) {
                     <p>{debt === 0 ? `You and ${name} are even` : debt > 0 ? `You owe ${name} $${Math.abs(debt)}` : `${name} owes you $${Math.abs(debt)}`}</p>
                 </div>
             </div>
-            <button>Select</button>
+            <button onClick={handleSelect}>{selected && selected.id === id ? "Close" : "Select"}</button>
         </div>
     )
 }

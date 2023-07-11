@@ -1,7 +1,10 @@
-function Split() {
+function Split({ selected }) {
+
+    if(!selected) return
+
     return (
-        <div className='split'>
-            <h1 style={{fontWeight: 'bold', fontSize: '24px'}}>Split bill with clark</h1>
+        <form className='split'>
+            <h1 style={{ fontWeight: 'bold', fontSize: '24px' }}>Split bill with {selected.name}</h1>
 
             <div className='split-container'>
                 <label>Bill Value</label>
@@ -29,7 +32,7 @@ function Split() {
             <button>Split bill</button>
 
 
-        </div>
+        </form>
     )
 }
 

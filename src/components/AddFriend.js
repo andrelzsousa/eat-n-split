@@ -14,7 +14,8 @@ function AddFriend({ onAddFriend }) {
         const newFriend = {
             name: nameValue,
             picture: rosto,
-            debt: 0
+            debt: 0,
+            id: Date.now()
         }
 
         onAddFriend(newFriend)
