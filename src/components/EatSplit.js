@@ -39,7 +39,7 @@ function EatSplit() {
             <FriendList friends={friends} onSelect={setSelected} selected={selected} />
             <AddFriend friends={friends} onAddFriend={handleAddFriend}/>
           </div>
-            <Split selected={selected} />
+            <Split selected={selected} onSelect={setSelected} setFriends={setFriends} friends={friends}/>
         </div>
       )
 }

@@ -7,7 +7,7 @@ function FriendList({friends, onSelect, selected}) {
 
     return (
         <div className='friendList'>
-            {friends.map((f) => <Friend name={f.name} picture={f.picture} debt={f.debt} id={f.id} key={f.id} onSelect={onSelect} selected={selected}/>)}
+            {friends.map((f) => <Friend friend={f}key={f.id} onSelect={onSelect} selected={selected}/>)}
         </div>
     )
 }
